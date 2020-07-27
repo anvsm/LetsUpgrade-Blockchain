@@ -1,0 +1,25 @@
+pragma solidity ^0.4.21 < 0.6.12;
+
+contract ReportCard{
+    
+    string public name;
+    string public rollno;
+    string public batch;
+    string public marks;
+    string public status;
+    
+    function ReportCard(string newName,string newRollno, string newBatch,string newMarks,string newStatus)public{
+        
+        name = newName;
+        rollno = newRollno;
+        batch = newBatch;
+        marks = newMarks;
+        status = newStatus;
+    }
+   
+    function getStudentReportCardDetails() public view returns(string,string,string,string,string){
+        
+        return(name,rollno,batch,marks,status);
+    }
+    
+}
